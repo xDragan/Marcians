@@ -44,11 +44,17 @@ int main(){
 		fflush(stdin);
 		if (direction == 97)
 		{
-			contX--;
+			if (contX != 0)
+			{
+				contX--;
+			}
 		}
 		if (direction == 100)
 		{
-			contX++;
+			if (contX != 9)
+			{
+				contX++;
+			}
 		}
 		
 		//Clean previous position
