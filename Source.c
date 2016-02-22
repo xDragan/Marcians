@@ -5,7 +5,7 @@
 int main(){
 
 	srand (time(NULL));
-	int lives = 5, contX = 4, contRand = 0;
+	int lives = 5, contX = 4, contRand = 0, score = 0;
 	char direction = '\0';
 	char matrix[10][10] =
 	{
@@ -39,7 +39,7 @@ int main(){
 		}
 
 		//Player movement
-		printf("\nLives = %d\nLEFT = 'a'| RIGHT = 'd'| SKIP turn = 'Enter' -> ", lives);
+		printf("\nLives = %d | Score = %d\nLEFT = 'a'| RIGHT = 'd'| SKIP turn = 'Enter' -> ", lives, score);
 		scanf_s("%c", &direction);
 		fflush(stdin);
 		if (direction == 97)
@@ -94,6 +94,8 @@ int main(){
 		{
 			lives--;
 		}
+		
+		score += 5;
 
 	}while (lives != 0);
 
